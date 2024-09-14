@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<ApplicationCP2.Models.Produto>
+
+<a asp-controller="Cliente" class="btn btn-primary">Ver ista de Clientes</a>
+<h2>Lista de Produtos</h2>
+
+@if (Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var produto in Model)
+            {
+                <tr>
+                    <td>@produto.IDPRODUTO</td>
+                    <td>@produto.NOME</td>
+                    <td>@produto.VALOR.ToString("C")</td>
+                    <td>
+                        <a href="@Url.Action("Detalhes", "Produto", new { id = produto.IDPRODUTO })">Detalhes</a> |
+                        <a href="@Url.Action("Editar", "Produto", new { id = produto.IDPRODUTO })">Editar</a> |
+                        <a href="@Url.Action("Apagar", "Produto", new { id = produto.IDPRODUTO })">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há produtos cadastrados.</p>
+}
+
+<a asp-action="Create" class="btn btn-primary">Novo Produto</a>

@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ApplicationCP2.Models.Cliente
+
+<h2>Adicionar Cliente</h2>
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="NOME">Nome do Cliente:</label>
+        <input asp-for="NOME" class="form-control" />
+        <span asp-validation-for="NOME" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="CPF">CPF:</label>
+        <input asp-for="CPF" class="form-control" />
+        <span asp-validation-for="CPF" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="RG">RG:</label>
+        <input asp-for="RG" class="form-control" />
+        <span asp-validation-for="RG" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="LOGIN">Login:</label>
+        <input asp-for="LOGIN" class="form-control" />
+        <span asp-validation-for="LOGIN" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="SENHA">Senha:</label>
+        <input asp-for="SENHA" class="form-control" />
+        <span asp-validation-for="SENHA" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="DATANASCIMENTO">Data de Nascimento:</label>
+        <input asp-for="DATANASCIMENTO" type="date" class="form-control" />
+        <span asp-validation-for="DATANASCIMENTO" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="EMAIL">Email:</label>
+        <input asp-for="EMAIL" class="form-control" />
+        <span asp-validation-for="EMAIL" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="CONTATOS">Contatos:</label>
+        <input asp-for="CONTATOS" class="form-control" />
+        <span asp-validation-for="CONTATOS" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="ENDERECO">Endereço:</label>
+        <input asp-for="ENDERECO" class="form-control" />
+        <span asp-validation-for="ENDERECO" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="COMPRAS">Compras:</label>
+        <input asp-for="COMPRAS" class="form-control" />
+        <span asp-validation-for="COMPRAS" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Adicionar Cliente</button> | 
+        <a asp-action="Index" class="btn btn-primary">Voltar para Lista</a>
+    </div>
+</form>

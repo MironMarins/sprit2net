@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ApplicationCP2.Models.Cliente
+
+<h2>Editar Cliente</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="IDCLIENTE" />
+
+    <div class="form-group">
+        <label asp-for="NOME" class="control-label"></label>
+        <input asp-for="NOME" class="form-control" />
+        <span asp-validation-for="NOME" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CPF" class="control-label"></label>
+        <input asp-for="CPF" class="form-control" />
+        <span asp-validation-for="CPF" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RG" class="control-label"></label>
+        <input asp-for="RG" class="form-control" />
+        <span asp-validation-for="RG" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LOGIN" class="control-label"></label>
+        <input asp-for="LOGIN" class="form-control" />
+        <span asp-validation-for="LOGIN" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SENHA" class="control-label"></label>
+        <input asp-for="SENHA" class="form-control" />
+        <span asp-validation-for="SENHA" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DATANASCIMENTO" class="control-label"></label>
+        <input asp-for="DATANASCIMENTO" class="form-control" />
+        <span asp-validation-for="DATANASCIMENTO" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EMAIL" class="control-label"></label>
+        <input asp-for="EMAIL" class="form-control" />
+        <span asp-validation-for="EMAIL" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CONTATOS" class="control-label"></label>
+        <input asp-for="CONTATOS" class="form-control" />
+        <span asp-validation-for="CONTATOS" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ENDERECO" class="control-label"></label>
+        <input asp-for="ENDERECO" class="form-control" />
+        <span asp-validation-for="ENDERECO" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="COMPRAS" class="control-label"></label>
+        <input asp-for="COMPRAS" class="form-control" />
+        <span asp-validation-for="COMPRAS" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ApplicationCP2.Models.Loja
+
+<h2>Confirmar Exclusão</h2>
+<p>Você tem certeza que deseja excluir a loja:</p>
+<p><strong>NOME:</strong> @Model.NOMELOJA</p>
+<p><strong>CNPJ:</strong> @Model.CNPJ</p>
+<p><strong>ENDEREÇO:</strong> @Model.ENDERECO</p>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="IDLOJA" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+

@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<a asp-controller="Produto" class="btn btn-primary">Ver ista de Produtos</a>
+<h2>Clientes</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>RG</th>
+            <th>Login</th>
+            <th>Data de Nascimento</th>
+            <th>Email</th>
+            <th>Contatos</th>
+            <th>Endereço</th>
+            <th>Compras</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.IDCLIENTE</td>
+                <td>@cliente.NOME</td>
+                <td>@cliente.CPF</td>
+                <td>@cliente.RG</td>
+                <td>@cliente.LOGIN</td>
+                <td>@cliente.DATANASCIMENTO.ToShortDateString()</td>
+                <td>@cliente.EMAIL</td>
+                <td>@cliente.CONTATOS</td>
+                <td>@cliente.ENDERECO</td>
+                <td>@cliente.COMPRAS</td>
+                <td>
+                    <a asp-controller="Cliente" asp-action="Edit" asp-route-id="@cliente.IDCLIENTE">Editar</a> |
+                    <a asp-controller="Cliente" asp-action="Delete" asp-route-id="@cliente.IDCLIENTE">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Novo Cliente</a>
